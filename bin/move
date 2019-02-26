@@ -3,3 +3,12 @@
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+display_board(board)
+game_over = false
+until game_over do
+	puts "Your move, choose a square?"
+	input = gets.strip
+	move(board,input_to_index(input))
+	display_board(board)
+end
